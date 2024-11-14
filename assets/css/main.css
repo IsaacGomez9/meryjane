@@ -2874,12 +2874,14 @@ button.alt:active,
 #logo a {
   line-height: 60px;
 }
+
 .logoSalon {
   object-fit: cover;
   height: 300px;
   width: 400px;
   margin-top: 40px;
 }
+
 a.tituloP,
 .tituloP {
   background: var(--tColor-bg-color);
@@ -2897,7 +2899,9 @@ a.tituloP,
 @media (max-width: 600px) {
   .divButtons {
     display: grid !important;
+    grid-template-rows: 60px;
   }
+
   .buttonColor {
     width: 300px;
   }
@@ -2979,9 +2983,20 @@ a.tituloP,
     padding-bottom: 40px;
     display: grid;
   }
+
+  .containerLogo img {
+    width: 70%;
+  }
 }
-.containerMap {
+
+.mapa {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.containerMap {
+  width: 80%;
+  height: 100%;
+  border-radius: 10px;
 }
