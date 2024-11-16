@@ -5,6 +5,24 @@ body {
   background-color: #f0f0f0;
 }
 
+.title {
+  display: flex;
+  align-items: center; /* Centra el texto verticalmente */
+  font-size: 34px; /* Tamaño del texto */
+  font-weight: bold;
+  color: #73197d;
+  margin: 20px 0; /* Margen superior e inferior */
+}
+
+.title::before,
+.title::after {
+  content: "";
+  flex: 1; /* Hace que las líneas ocupen el mismo espacio */
+  height: 1px; /* Grosor de la línea */
+  background-color: #73197d; /* Color de la línea */
+  margin: 0 10px; /* Espaciado entre la línea y el texto */
+}
+
 .main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -35,4 +53,29 @@ body {
 .center {
   text-align: center;
   color: #54125d;
+}
+.buttonReturn {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  bottom: 100px;
+  left: 1100px;
+  background-color: #e7aca1;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.buttonReturn a {
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .buttonReturn {
+    position: relative;
+    left: 90px;
+    bottom: 30px;
+  }
+}
+.center {
+  width: 80%;
+  margin: 0 auto;
 }
